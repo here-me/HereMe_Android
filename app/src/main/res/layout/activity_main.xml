@@ -16,4 +16,14 @@
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
 
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_notify" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/animation_view"
+            app:layout_constraintStart_toStartOf="@+id/animation_view"
+            app:layout_constraintEnd_toEndOf="@+id/animation_view" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
