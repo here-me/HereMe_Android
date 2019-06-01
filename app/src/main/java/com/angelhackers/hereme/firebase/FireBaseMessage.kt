@@ -12,7 +12,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import android.R
 import android.app.NotificationChannel
-import com.angelhackers.hereme.activity.MainActivity
+import com.angelhackers.hereme.MainActivity
 
 
 class FireBaseMessage : FirebaseMessagingService() {

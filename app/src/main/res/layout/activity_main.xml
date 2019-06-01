@@ -26,4 +26,12 @@
             app:layout_constraintEnd_toEndOf="@+id/animation_view" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"/>
 
+    <Button
+            android:id="@+id/btnn"
+android:text="123"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintBottom_toTopOf="@+id/btn_act_main_toMap"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/animation_view"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
