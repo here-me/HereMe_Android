@@ -1,4 +1,4 @@
-package com.angelhackers.hereme.data
+package com.angelhackers.hereme.data.get
 
 data class GetTestResponse(
     val success : Boolean,
