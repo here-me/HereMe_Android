@@ -3,8 +3,9 @@ package com.angelhackers.hereme
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
-import com.angelhackers.hereme.data.GetTestResponse
+import com.angelhackers.hereme.data.get.GetTestResponse
 import com.angelhackers.hereme.network.ApplicationController
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var smtp: StrictMode.ThreadPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(smtp)
 
         btn_act_main_toMap.setOnClickListener {
             val nextIntent = Intent(this, MapsActivity::class.java)
