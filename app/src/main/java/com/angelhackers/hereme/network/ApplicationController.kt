@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApplicationController : Application(){
     lateinit var networkService: NetworkService
-    private val baseUrl = "http://54.180.119.179"
+    private val baseUrl = "http://54.180.119.179:8080"
 
     companion object {
         lateinit var instance : ApplicationController
