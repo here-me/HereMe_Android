@@ -1,6 +1,4 @@
-package com.angelhackers.hereme.Activity
-
-import android.app.Notification
+package com.angelhackers.hereme.activity
 
 import android.os.Bundle
 import android.view.View
@@ -12,8 +10,8 @@ import androidx.core.app.NotificationManagerCompat
 
 import com.angelhackers.hereme.R
 
-import com.angelhackers.hereme.Activity.App.Companion.CHANNEL_1_ID
-import com.angelhackers.hereme.Activity.App.Companion.CHANNEL_2_ID
+import com.angelhackers.hereme.activity.App.Companion.CHANNEL_1_ID
+import com.angelhackers.hereme.activity.App.Companion.CHANNEL_2_ID
 
 class NotifyActivity : AppCompatActivity() {
 

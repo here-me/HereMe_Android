@@ -1,4 +1,4 @@
-package com.angelhackers.hereme.DB
+package com.angelhackers.hereme.db
 
 
 import android.content.Context
