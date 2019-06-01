@@ -2,6 +2,7 @@ package com.angelhackers.hereme
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -15,4 +16,6 @@ class SplashActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    lateinit var v : View;
 }
