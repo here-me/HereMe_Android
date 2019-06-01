@@ -1,7 +1,9 @@
-package com.angelhackers.hereme;
+package com.angelhackers.hereme.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.angelhackers.hereme.R;
 
 public class MainActivity extends AppCompatActivity {
 
