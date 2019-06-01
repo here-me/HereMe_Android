@@ -6,11 +6,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-
-    <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
-
     <application
             android:name=".network.ApplicationController"
             android:allowBackup="true"
@@ -19,6 +14,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
+
         <activity android:name=".firebase.FirebaseActivity"></activity>
         <activity
                 android:name=".SplashActivity"

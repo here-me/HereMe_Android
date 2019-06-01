@@ -26,27 +26,37 @@ class MainActivity : AppCompatActivity() {
         btn_act_main_toMap.setOnClickListener {
             val nextIntent = Intent(this, MapsActivity::class.java)
             startActivity(nextIntent)
+            finish()
         }
 
-        btnn.setOnClickListener {
-            getTestResponse()
 
-        }
+       // getTestResponse()
     }
+//    static View v; // 프래그먼트의 뷰 인스턴스
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//        if(v!=null){
+//            ViewGroup parent = (ViewGroup)v.getParent();
+//            if(parent!=null){
+//                parent.removeView(v);
+//            }
+//        }
+//    }
 
-    private fun getTestResponse() {
-        getTestResponse = networkService.getTestResponse()
-        getTestResponse.enqueue(object : Callback<GetTestResponse> {
-            override fun onFailure(call: Call<GetTestResponse>, t: Throwable) {
-                Log.e("Mypage-Scrap failed", t.toString())
-            }
-
-            override fun onResponse(call: Call<GetTestResponse>, response: Response<GetTestResponse>) {
-                if (response.isSuccessful) {
-                        toast(response.body()!!.message)
-                }
-
-            }
-        })
-    }
+//    private fun getTestResponse() {
+//        getTestResponse = networkService.getTestResponse()
+//        getTestResponse.enqueue(object : Callback<GetTestResponse> {
+//            override fun onFailure(call: Call<GetTestResponse>, t: Throwable) {
+//                Log.e("Mypage-Scrap failed", t.toString())
+//            }
+//
+//            override fun onResponse(call: Call<GetTestResponse>, response: Response<GetTestResponse>) {
+//                if (response.isSuccessful) {
+//                        toast(response.body()!!.message)
+//                }
+//
+//            }
+//        })
+//    }
 }
