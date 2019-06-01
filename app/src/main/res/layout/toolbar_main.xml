@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="40dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/AppTheme">
+    <RelativeLayout
+            android:background="@color/colorPrimaryYellow"
+            android:layout_width="match_parent"
+                    android:layout_height="40dp">
+<TextView
+        android:text="날짜"
+        android:id="@+id/txt_toolbar_main_date"
+        android:layout_centerInParent="true"
+        android:textColor="#212121"
+        android:letterSpacing="-0.04"
+        android:fontFamily="@font/nanum_square_round_otfr"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
