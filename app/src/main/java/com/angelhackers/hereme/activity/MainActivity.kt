@@ -18,10 +18,22 @@ class MainActivity : AppCompatActivity() {
         btn_act_main_toMap.setOnClickListener {
             val nextIntent = Intent(this, MapsActivity::class.java)
             startActivity(nextIntent)
-        }
+            finish()
 
+        }
        // getTestResponse()
     }
+//    static View v; // 프래그먼트의 뷰 인스턴스
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//        if(v!=null){
+//            ViewGroup parent = (ViewGroup)v.getParent();
+//            if(parent!=null){
+//                parent.removeView(v);
+//            }
+//        }
+//    }
 
 //    private fun getTestResponse(){
 //val getTestResponse = networkService.getTestResponse()
