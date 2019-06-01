@@ -1,4 +1,4 @@
-package com.angelhackers.hereme;
+package com.angelhackers.hereme.Activity;
 
 import android.app.Application;
 import android.app.NotificationChannel;
