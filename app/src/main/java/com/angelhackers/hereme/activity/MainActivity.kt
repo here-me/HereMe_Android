@@ -1,4 +1,4 @@
-package com.angelhackers.hereme.Activity
+package com.angelhackers.hereme.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

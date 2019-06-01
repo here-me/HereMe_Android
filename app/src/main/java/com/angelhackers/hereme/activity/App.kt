@@ -1,4 +1,4 @@
-package com.angelhackers.hereme.Activity
+package com.angelhackers.hereme.activity
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -37,7 +37,7 @@ class App : Application() {
     }
 
     companion object {
-        val CHANNEL_1_ID = "channel1"
-        val CHANNEL_2_ID = "channel2"
+        const val CHANNEL_1_ID = "channel1"
+        const val CHANNEL_2_ID = "channel2"
     }
 }
