@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "238384418349",
+    "firebase_url": "https://hereme-4a8ec.firebaseio.com",
+    "project_id": "hereme-4a8ec",
+    "storage_bucket": "hereme-4a8ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238384418349:android:e2d455386df4c9e5",
+        "android_client_info": {
+          "package_name": "com.angelhackers.hereme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238384418349-r3hg5nvoamsqlfrr2aeq6hv1t5mlaljd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angelhackers.hereme",
+            "certificate_hash": "03520b881bdac7fbb429969188f58a42577d3a35"
+          }
+        },
+        {
+          "client_id": "238384418349-n44mklu38shhc7mvgr09hng7qs787s4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDopaNcEwrxwWkApoFkP-G0R8QEioycxew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238384418349-n44mklu38shhc7mvgr09hng7qs787s4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
