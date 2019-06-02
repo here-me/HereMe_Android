@@ -8,16 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.angelhackers.hereme.R
 import com.angelhackers.hereme.data.HomeOverviewData
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
-import org.jetbrains.anko.backgroundDrawable
-import org.jetbrains.anko.image
 
-class HomeOverviewRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeOverviewData>) :
+class HomeOverviewRecyclerViewAdapter(var ctx: Context, var dataList: ArrayList<HomeOverviewData>) :
     RecyclerView.Adapter<HomeOverviewRecyclerViewAdapter.Holder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): Holder {
         val view: View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_main_home_friend, viewGroup, false)

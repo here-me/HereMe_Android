@@ -9,10 +9,6 @@ import retrofit2.http.Path
 
 
 interface NetworkService {
-    //get Test
-    @GET("/")
-    fun getTestResponse(
-    ): Call<GetTestResponse>
 
     //친구 리스트 불러오기
     @GET("/friends")
