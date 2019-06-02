@@ -36,9 +36,6 @@ class MainSettingFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        btn_act_main_toMap.setOnClickListener {
-            startActivity<MapsActivity>()
-        }
     }
 
 

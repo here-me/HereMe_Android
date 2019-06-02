@@ -7,8 +7,10 @@ import android.view.View
 import android.widget.TextView
 import com.angelhackers.hereme.adapter.ProductMainPagerAdapter
 import com.angelhackers.hereme.data.get.GetTestResponse
+import com.angelhackers.hereme.fragment.DialogFragment
 import com.angelhackers.hereme.network.ApplicationController
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.ctx
 import retrofit2.Call
 import java.text.SimpleDateFormat
 import java.util.*
@@ -25,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         configureMainTab()
         setDate()
-        // getTestResponse()
     }
+
 
     private fun setDate()
     {
@@ -52,31 +54,4 @@ class MainActivity : AppCompatActivity() {
         tl_main_home.getTabAt(1)!!.customView = navCategoryMainLayout.findViewById(R.id.rl_nav_main_friend_list)
         tl_main_home.getTabAt(2)!!.customView = navCategoryMainLayout.findViewById(R.id.rl_nav_main_setting)
     }
-//    static View v; // 프래그먼트의 뷰 인스턴스
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        if(v!=null){
-//            ViewGroup parent = (ViewGroup)v.getParent();
-//            if(parent!=null){
-//                parent.removeView(v);
-//            }
-//        }
-//    }
-
-//    private fun getTestResponse() {
-//        getTestResponse = networkService.getTestResponse()
-//        getTestResponse.enqueue(object : Callback<GetTestResponse> {
-//            override fun onFailure(call: Call<GetTestResponse>, t: Throwable) {
-//                Log.e("Mypage-Scrap failed", t.toString())
-//            }
-//
-//            override fun onResponse(call: Call<GetTestResponse>, response: Response<GetTestResponse>) {
-//                if (response.isSuccessful) {
-//                        toast(response.body()!!.message)
-//                }
-//
-//            }
-//        })
-//    }
 }
