@@ -1,7 +1,10 @@
 package com.angelhackers.hereme.fragment
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,12 +16,14 @@ import com.angelhackers.hereme.R
 import com.angelhackers.hereme.adapter.FriendListMainAdapter
 import com.angelhackers.hereme.data.FriendListMainData
 import com.angelhackers.hereme.data.get.GetFragFriendListResponse
+import com.angelhackers.hereme.data.get.GetRes
 import com.angelhackers.hereme.network.ApplicationController
 import com.angelhackers.hereme.network.NetworkService
 import kotlinx.android.synthetic.main.fragment_main_friend_list.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.concurrent.thread
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,7 +59,22 @@ class MainFriendListFragment : Fragment() {
         act_frag_main_friend_list_recycle.layoutManager = LinearLayoutManager(context!!)
 
 
-        getFragFriendListResponse()
+        @SuppressLint("HandlerLeak")
+        mHandler = object : Handler() {
+            override fun handleMessage(msg: Message) {
+                getFragFriendListResponse()
+            }
+        }
+
+        thread(start = true) {
+            while (true) {
+                Thread.sleep(1000)
+                mHandler?.sendEmptyMessage(0)
+                break;
+            }
+        }
+
+
     }
 
     fun getFragFriendListResponse() {
