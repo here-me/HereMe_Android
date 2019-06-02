@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                tools:context=".fragment.DialogFragment">
+
+    <View
+            android:background="#ff6656"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"/>
+    <LinearLayout
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal"
+            android:background="@drawable/dialog_bolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="13dp"
+                    android:id="@+id/img_rv_item_home_friend_picture_back"
+                    android:background="@drawable/rv_main_friend_circle_border"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="78dp"
+                    android:src="@drawable/grandfa"
+                    android:layout_height="78dp"/>
+
+            <ImageView
+                    android:id="@+id/img_rv_item_alert"
+                    android:visibility="visible"
+                    android:layout_marginLeft="69dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_red_warn"/>
+            </RelativeLayout>
+        <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/txt_rv_item_home_friend_name2"
+                        android:text="우리아빠"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:text="님은 "
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txt_rv_item_home_friend_where2"
+                        android:text="부산시"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:text="에 계세요"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:text="현재 "
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txt_rv_item_home_friend_where3"
+                        android:text="부산시"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:text="의 날씨는 "
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/rv_item_home_friend_how"
+                        android:text="폭우"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:text="입니다"
+                        android:textColor="#212121"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nanum_square_round_otfr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+            android:id="@+id/btn_frag_dialog_submit"
+            android:layout_width="118dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:text="확인했어요"
+            android:textColor="#fff"
+            android:fontFamily="@font/nanum_square_round_otfb"
+            android:gravity="center"
+            android:background="@drawable/submit_botder"/>
+</RelativeLayout>

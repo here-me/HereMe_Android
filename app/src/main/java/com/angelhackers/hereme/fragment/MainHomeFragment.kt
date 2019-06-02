@@ -46,6 +46,12 @@ class MainHomeFragment : Fragment() {
         rv_frag_main_home_friend_info.layoutManager = LinearLayoutManager(context!!)
 
         getHomeFragFriendListResponse()
+        setDialog()
+    }
+
+    private fun setDialog() {
+        val secondDialog: DialogFragment = DialogFragment(context!!)
+        secondDialog.show()
     }
 
     fun getHomeFragFriendListResponse(){
