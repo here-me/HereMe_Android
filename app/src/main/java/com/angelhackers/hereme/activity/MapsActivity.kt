@@ -8,14 +8,12 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
-import android.os.Build
-import android.os.Bundle
-import android.os.Handler
-import android.os.Message
+import android.os.*
 import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.angelhackers.hereme.data.get.GetRes
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -23,6 +21,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_maps.*
+import java.util.concurrent.ExecutionException
 import kotlin.concurrent.thread
 
 
@@ -35,7 +34,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private var mMap: GoogleMap? = null
 
 
-    //GPS Variable
     private var gpsInitialized = false
     lateinit var locationManager: LocationManager
     private var hasGps = false
@@ -43,12 +41,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private var locationGps: Location? = null
     private var locationNetwork: Location? = null
 
-    private var latitude : Double = 0.0
-    private var longitude : Double = 0.0
+    private var latitude: Double = 0.0
+    private var longitude: Double = 0.0
 
-    var tv_result : String = "";
+    var tv_result: String = "";
 
-    private var permissions = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
+    private var permissions =
+        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
 
     private var mHandler: Handler? = null
 
@@ -68,17 +67,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         getLocation()
 
-        /*
 
+        /*
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
-
+        */
 
         @SuppressLint("HandlerLeak")
         mHandler = object : Handler() {
             override fun handleMessage(msg: Message) {
-                setMapMaker(latitude, longitude);
+                Log.d("온도", GetRes.readJsonFromUrl("http://13.124.149.65:8080/temp/"
+                        + latitude.toInt().toString() + "/" + longitude.toInt().toString()).getString("temperature"))
             }
         }
 
@@ -87,8 +87,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 Thread.sleep(1000)
                 mHandler?.sendEmptyMessage(0)
             }
-        }*/
+        }
     }
+
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
@@ -97,9 +98,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-
-    private fun setMapMaker(x : Double , y : Double) {
-        if(gpsInitialized){
+    private fun setMapMaker(x: Double, y: Double) {
+        if (gpsInitialized) {
             mMap!!.clear()
             Log.d("호출", "================")
             // Add a marker in Syd\ney and move the camera
@@ -129,19 +129,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 locationGps = location
                                 tv_result += "\nGPS "
                                 tv_result += "\nLatitude : " + locationGps!!.latitude
-                                tv_result +="\nLongitude : " + locationGps!!.longitude
+                                tv_result += "\nLongitude : " + locationGps!!.longitude
                                 latitude = locationNetwork!!.latitude
                                 longitude = locationNetwork!!.longitude
                                 Log.d("CodeAndroidLocation", " GPS Latitude : " + locationGps!!.latitude)
                                 Log.d("CodeAndroidLocation", " GPS Longitude : " + locationGps!!.longitude)
                             }
                         }
+
                         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
 
                         }
+
                         override fun onProviderEnabled(provider: String?) {
 
                         }
+
                         override fun onProviderDisabled(provider: String?) {
 
                         }
@@ -164,19 +167,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 locationNetwork = location
                                 tv_result += "\nGPS "
                                 tv_result += "\nLatitude : " + locationGps!!.latitude
-                                tv_result +="\nLongitude : " + locationGps!!.longitude
+                                tv_result += "\nLongitude : " + locationGps!!.longitude
                                 latitude = locationNetwork!!.latitude
                                 longitude = locationNetwork!!.longitude
                                 Log.d("CodeAndroidLocation", " Network Latitude : " + locationNetwork!!.latitude)
                                 Log.d("CodeAndroidLocation", " Network Longitude : " + locationNetwork!!.longitude)
                             }
                         }
+
                         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
 
                         }
+
                         override fun onProviderEnabled(provider: String?) {
 
                         }
+
                         override fun onProviderDisabled(provider: String?) {
 
                         }
@@ -191,7 +197,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 if (locationGps!!.accuracy > locationNetwork!!.accuracy) {
                     tv_result += "\nGPS "
                     tv_result += "\nLatitude : " + locationGps!!.latitude
-                    tv_result +="\nLongitude : " + locationGps!!.longitude
+                    tv_result += "\nLongitude : " + locationGps!!.longitude
                     latitude = locationNetwork!!.latitude
                     longitude = locationNetwork!!.longitude
                     Log.d("CodeAndroidLocation", " Network Latitude : " + locationNetwork!!.latitude)
@@ -199,7 +205,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 } else {
                     tv_result += "\nGPS "
                     tv_result += "\nLatitude : " + locationGps!!.latitude
-                    tv_result +="\nLongitude : " + locationGps!!.longitude
+                    tv_result += "\nLongitude : " + locationGps!!.longitude
                     latitude = locationNetwork!!.latitude
                     longitude = locationNetwork!!.longitude
                     Log.d("CodeAndroidLocation", " GPS Latitude : " + locationGps!!.latitude)
@@ -211,7 +217,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
         }
 
-        Log.d("Location",tv_result)
+        Log.d("Location", tv_result)
     }
 
     private fun checkPermission(permissionArray: Array<String>): Boolean {
@@ -241,7 +247,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     }
                 }
             }
-            if (allSuccess){
+            if (allSuccess) {
                 //enableView()
             }
         }
