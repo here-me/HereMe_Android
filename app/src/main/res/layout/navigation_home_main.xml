@@ -17,7 +17,7 @@
                 android:gravity="center">
             <ImageView
                     android:id="@+id/img_nav_main_home"
-                    android:src="@color/black"
+                    android:src="@drawable/icon_home"
                     android:layout_width="24dp"
                     android:layout_height="24dp"/>
             <TextView
@@ -38,7 +38,7 @@
                 android:gravity="center">
             <ImageView
                     android:id="@+id/img_nav_main_friend_list"
-                    android:src="@color/black"
+                    android:src="@drawable/icon_list"
                     android:layout_width="24dp"
                     android:layout_height="24dp"/>
             <TextView
@@ -59,7 +59,7 @@
                 android:gravity="center">
             <ImageView
                     android:id="@+id/img_nav_main_setting"
-                    android:src="@color/black"
+                    android:src="@drawable/icon_setting"
                     android:layout_width="24dp"
                     android:layout_height="24dp"/>
             <TextView
