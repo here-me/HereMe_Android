@@ -63,4 +63,5 @@ class HomeOverviewRecyclerViewAdapter(var ctx: Context, var dataList: ArrayList<
         var img_thumbnail_back = itemView.findViewById(R.id.img_rv_item_home_friend_picture_back) as CircleImageView
         var alert_image = itemView.findViewById(R.id.img_rv_item_alert) as ImageView
     }
+
 }

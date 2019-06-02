@@ -22,19 +22,19 @@
                 android:value="@string/google_maps_key"/>
         <meta-data
                 android:name="com.google.firebase.messaging.default_notification_icon"
-                android:resource="@drawable/common_google_signin_btn_icon_dark" />
+                android:resource="@drawable/clear" />
 
         <activity android:name=".firebase.FirebaseActivity"></activity>
         <activity
                 android:name=".SplashActivity"
                 android:theme="@style/SplashTheme">
-        </activity>
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
         </activity>
         <service
                 android:name=".firebase.MyFireBaseMessagingService"

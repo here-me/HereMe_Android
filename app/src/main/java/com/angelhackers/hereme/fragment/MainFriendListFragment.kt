@@ -63,7 +63,7 @@ class MainFriendListFragment : Fragment() {
         @SuppressLint("HandlerLeak")
         mHandler = object : Handler() {
             override fun handleMessage(msg: Message) {
-                getFragFriendListResponse()
+                //getFragFriendListResponse()
             }
         }
 

@@ -35,6 +35,8 @@ class MainHomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_home, container, false)
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -44,16 +46,16 @@ class MainHomeFragment : Fragment() {
         homeOverviewRecyclerViewAdapter = HomeOverviewRecyclerViewAdapter(context!!,dataList)
         rv_frag_main_home_friend_info.adapter = homeOverviewRecyclerViewAdapter
         rv_frag_main_home_friend_info.layoutManager = LinearLayoutManager(context!!)
+        setDialog()
 
         getHomeFragFriendListResponse()
-        setDialog()
     }
+
 
     private fun setDialog() {
         val secondDialog: DialogFragment = DialogFragment(context!!)
         secondDialog.show()
     }
-
     fun getHomeFragFriendListResponse(){
         val getHomeFragFriendListResponse = networkService.getHomeFragFriendListResponse()
         getHomeFragFriendListResponse.enqueue(object: Callback<GetHomeFragFriendListResponse>{
