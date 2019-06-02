@@ -64,11 +64,12 @@
                 android:background="#eeeeee"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"/>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
             <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_frag_main_home_friend_info"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"/>
-
+                    android:layout_height="wrap_content"/>
+        </FrameLayout>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

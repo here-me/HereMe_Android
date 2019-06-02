@@ -36,6 +36,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //추가
+
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation "com.airbnb.android:lottie:3.0.1"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
