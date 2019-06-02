@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/rv_main_friend_border"
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="24dp"
+                    android:id="@+id/rv_item_friend_picture"
+                    android:background="@drawable/rv_main_friend_circle_border"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp" android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" android:layout_marginStart="24dp"
+                    android:layout_alignParentLeft="true"/>
+        </RelativeLayout>
+        <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                    android:layout_width="260dp"
+                    android:layout_height="60dp">
+                <TextView
+                        android:id="@+id/txt_rv_item_friend_name"
+                        android:layout_marginLeft="20dp"
+                        android:text="김가네"
+                        android:layout_below="@+id/rv_item_home_friend_where"
+                        android:textSize="20dp"
+                        android:textColor="#212121"
+                        android:fontFamily="@font/nanum_square_round_otfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true" android:layout_marginBottom="16dp"
+                        android:layout_alignParentStart="true" android:layout_marginStart="20dp"
+                        android:layout_alignParentLeft="true"/>
+                <Button
+                        android:text="친구추가"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" android:id="@+id/rv_item_friend_request"
+                        android:layout_alignParentEnd="true" android:layout_alignParentRight="true"
+                        android:layout_marginRight="11dp" android:layout_marginEnd="11dp"
+                        android:layout_marginTop="10dp" android:layout_alignParentTop="true"
+                        android:fontFamily="@font/nanum_square_round_otfl" android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"/>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                    android:layout_marginTop="17dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+            android:background="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+</LinearLayout>
