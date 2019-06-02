@@ -58,6 +58,7 @@ class MainFriendListFragment : Fragment() {
         act_frag_main_friend_list_recycle.adapter = friendListMainAdapter
         act_frag_main_friend_list_recycle.layoutManager = LinearLayoutManager(context!!)
 
+        var mHandler: Handler? = null
 
         @SuppressLint("HandlerLeak")
         mHandler = object : Handler() {
